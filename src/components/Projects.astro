@@ -7,7 +7,7 @@ const PRINCIPAL_PROJECTS = [
     title: "HyperX",
     description:
       "Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.",
-    link: "#",
+    link: "https://eccommerce-tech-nucba.vercel.app",
     tags: ["React", "Styled Components"],
   },
   {
@@ -15,48 +15,42 @@ const PRINCIPAL_PROJECTS = [
     title: "Sunset",
     description:
       "Weather page with a map and geolocation function. Designed with an intuitive and attractive interface. Uses OpenWeather API.",
-    link: "#",
+    link: "https://sunset-issblann.vercel.app",
     tags: ["React", "CSS vanilla"],
   },
 ];
 
 const SECONDARY_PROJECTS = [
   {
-    img: "../../public/image-projects.webp",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    link: "#",
-    tags: ["React", "Node", "MongoDB"],
+    title: "Pomodoro React Native",
+    description: "Pomodoro with React Native.",
+    link: "https://github.com/Issblann/Pomodoro-React-Native",
+    tags: ["React Native", "Expo"],
   },
   {
-    img: "../../public/image-projects.webp",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    link: "#",
-    tags: ["React", "Node", "MongoDB"],
+    title: "Quotes Page",
+    description: "Motivational life quotes of famous leaders.",
+    link: "https://github.com/Issblann/Quotes-Page",
+    tags: ["Javascript", "CSS vanilla", "HTML"],
   },
   {
-    img: "../../public/image-projects.webp",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    link: "#",
-    tags: ["React", "Node", "MongoDB"],
+    title: "SuperMercar System",
+    description: "Supermarket API.",
+    link: "https://github.com/Issblann/Taller_4_JAVA_SuperMercarSis",
+    tags: ["JAVA"],
   },
   {
-    img: "../../public/image-projects.webp",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    link: "#",
-    tags: ["React", "Node", "MongoDB"],
+    title: "Fresh Care",
+    description: "Skincare landing page.",
+    link: "https://fresh-care.vercel.app/",
+    tags: ["Javascript", "CSS vanilla", "HTML"],
   },
 ];
 ---
 
-<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-14">
   {PRINCIPAL_PROJECTS.map((project) => <CardProjects {...project} />)}
-  {SECONDARY_PROJECTS.map((project) => <MiniCardProjects {...project} />)}
+  <div class="grid md:grid-cols-2 grid-cols-1 w-full gap-4">
+    {SECONDARY_PROJECTS.map((project) => <MiniCardProjects {...project} />)}
+  </div>
 </div>

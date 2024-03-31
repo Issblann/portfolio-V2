@@ -1,14 +1,43 @@
+---
+import ArrowRight from "./icons/ArrowRight.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  link?: string;
+  tags: string[];
+}
+
+const { title, description, link, tags } = Astro.props;
+---
+
 <a
-  href="#"
-  class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+  href={link}
+  target="_blank"
+  class="block max-w-sm p-6 relative bg-white border border-gray-200 rounded-lg shadow hover:-translate-y-1 transition-transform duration-300 ease-in-out hover:bg-purple-200/50 dark:bg-gray-700/50 dark:border-gray-700 dark:hover:bg-gray-700"
 >
   <h5
     class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
   >
-    Noteworthy technology acquisitions 2021
+    {title}
   </h5>
   <p class="font-normal text-gray-700 dark:text-gray-400">
-    Here are the biggest enterprise technology acquisitions of 2021 so far, in
-    reverse chronological order.
+    {description}
   </p>
+
+  <div class="flex flex-wrap gap-2 mt-5">
+    {
+      tags.map((tag) => (
+        <span class="px-2 py-1 text-sm font-medium dark:text-white text-slate-600 bg-purple-200/60 dark:bg-purple-800/50 rounded-lg">
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+
+  <div
+    class="absolute top-2 right-2 w-full h-full flex items-center text-purple-700 justify-center opacity-0 transition-opacity duration-300 hover:opacity-100"
+  >
+    <ArrowRight class="absolute top-0 right-0" />
+  </div>
 </a>

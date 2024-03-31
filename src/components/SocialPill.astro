@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { link, icon, title } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  class="max-w-sm p-6 relative flex items-center gap-4 text-gray-700 dark:text-indigo-50 bg-white border border-gray-200 rounded-lg shadow hover:-translate-y-1 transition-transform duration-300 ease-in-out hover:bg-purple-200/50 dark:bg-gray-700/50 dark:border-gray-700 dark:hover:bg-gray-700"
+>
+  <Icon name={icon} size={25} />
+  <span class="text-lg">{title}</span>
+</a>

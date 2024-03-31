@@ -1,0 +1,23 @@
+---
+import ArrowRight from "./icons/ArrowRight.astro";
+import GithubIcon from "./icons/Github.svg";
+import LinkedinIcon from "./icons/Linkedin.svg";
+import { Icon } from "astro-icon/components";
+import SocialPill from "./SocialPill.astro";
+const SOCIALS = [
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/anaperafan-dev/",
+    icon: "Linkedin",
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/Issblann",
+    icon: "Github",
+  },
+];
+---
+
+<article class="grid gap-4 grid-flow-row grid-cols-1 sm:grid-cols-2">
+  {SOCIALS.map((social) => <SocialPill {...social} />)}
+</article>
