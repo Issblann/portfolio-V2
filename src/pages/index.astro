@@ -8,6 +8,8 @@ import StarIcon from "../components/icons/Star.astro";
 import Projects from "../components/Projects.astro";
 import AtIcon from "../components/icons/AtIcon.astro";
 import Socials from "../components/Socials.astro";
+import EmailIcon from "../components/icons/Email.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
@@ -54,6 +56,16 @@ import Socials from "../components/Socials.astro";
         <AtIcon />
       </h1>
       <Socials />
+    </SectionContainer>
+
+    <SectionContainer class="py-14">
+      <h1
+        class="text-2xl mb-5 flex items-center gap-3 font-bold text-purple-400 p-2 dark:text-white"
+      >
+        Contact
+        <EmailIcon class="mt-2 size-7" />
+      </h1>
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>

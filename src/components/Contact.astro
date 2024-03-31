@@ -1,0 +1,43 @@
+---
+import SendIcon from "./icons/Send.astro";
+import CopyIcon from "./icons/Copy.astro";
+---
+
+<div class="flex gap-2">
+  <input
+    id="myText"
+    type="text"
+    disabled
+    class="bg-black/5 dark:bg-white/5 grid place-items-center w-full py-1.5 px-3 rounded-lg text-slate-600 dark:text-slate-300"
+    value="anaperafan.dev@gmail.com"
+  />
+
+  <div class="flex gap-2 text-indigo-100">
+    <a
+      class="bg-purple-600 hover:bg-purple-500 p-2 px-3 rounded-lg"
+      href='mailto:"anaperafan.dev@gmail.com"'
+    >
+      <SendIcon />
+    </a>
+    <button
+      onclick="copyContent()"
+      class="bg-purple-600 copy-button hover:bg-purple-500 p-2 px-3 rounded-lg"
+    >
+      <CopyIcon />
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  const text = document.getElementById("myText")?.value;
+
+  const buttonCopy = document.querySelector(".copy-button");
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      buttonCopy.innerHTML = "Copied!";
+    } catch (error) {
+      console.error("Error copying email to clipboard", error);
+    }
+  };
+</script>

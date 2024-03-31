@@ -1,11 +1,12 @@
 ---
 import SunIcon from "./icons/Sun.astro";
 import MoonIcon from "./icons/Moon.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="relative ml-1 mr-1">
   <SunIcon class="theme-toggle-icon light size-5 transition-all" />
-  <!-- <MoonIcon class="theme-toggle-icon dark size-5 transition-all" /> -->
+  <MoonIcon class="theme-toggle-icon dark size-5 transition-all" />
 </div>
 
 <style>
@@ -27,8 +28,10 @@ import MoonIcon from "./icons/Moon.astro";
   }
 </style>
 
-<script is:inline>
-  const lightIcon = document.querySelector(".light");
+<!-- <script is:inline>
+  const lightIcon = document.querySelector("#light");
+
+  console.log(lightIcon);
   const darkIcon = document.querySelector(".dark");
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -42,4 +45,4 @@ import MoonIcon from "./icons/Moon.astro";
   };
 
   iconToggle();
-</script>
+</script> -->
