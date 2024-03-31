@@ -4,6 +4,9 @@ import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CardProjects from "../components/CardProjects.astro";
+import StarIcon from "../components/icons/Star.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -26,6 +29,14 @@ import BriefcaseIcon from "../components/icons/Briefcase.astro";
       </div>
 
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer class="py-40">
+      <div class="flex mb-10 items-center gap-4">
+        <h1 class="text-2xl font-bold">Projects</h1>
+        <StarIcon />
+      </div>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

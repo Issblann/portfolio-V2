@@ -1,0 +1,62 @@
+---
+import CardProjects from "./CardProjects.astro";
+import MiniCardProjects from "./MiniCardProjects.astro";
+const PRINCIPAL_PROJECTS = [
+  {
+    img: "../../public/image-projects.webp",
+    title: "HyperX",
+    description:
+      "Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.",
+    link: "#",
+    tags: ["React", "Styled Components"],
+  },
+  {
+    img: "../../public/image-projects-2.webp",
+    title: "Sunset",
+    description:
+      "Weather page with a map and geolocation function. Designed with an intuitive and attractive interface. Uses OpenWeather API.",
+    link: "#",
+    tags: ["React", "CSS vanilla"],
+  },
+];
+
+const SECONDARY_PROJECTS = [
+  {
+    img: "../../public/image-projects.webp",
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+    link: "#",
+    tags: ["React", "Node", "MongoDB"],
+  },
+  {
+    img: "../../public/image-projects.webp",
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+    link: "#",
+    tags: ["React", "Node", "MongoDB"],
+  },
+  {
+    img: "../../public/image-projects.webp",
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+    link: "#",
+    tags: ["React", "Node", "MongoDB"],
+  },
+  {
+    img: "../../public/image-projects.webp",
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
+    link: "#",
+    tags: ["React", "Node", "MongoDB"],
+  },
+];
+---
+
+<div class="flex flex-col gap-10">
+  {PRINCIPAL_PROJECTS.map((project) => <CardProjects {...project} />)}
+  {SECONDARY_PROJECTS.map((project) => <MiniCardProjects {...project} />)}
+</div>
