@@ -1,0 +1,47 @@
+---
+import SunIcon from "./icons/Sun.astro";
+import MoonIcon from "./icons/Moon.astro";
+
+const THEMES = ["Light", "Dark"];
+---
+
+<div class="relative ml-1 mr-1">
+  <SunIcon id="light" class="theme-toggle-icon light size-5 transition-all" />
+  <!-- <MoonIcon id="dark" class="theme-toggle-icon dark size-5 transition-all" /> -->
+</div>
+
+<style>
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .display-none-theme-toggle {
+    @apply hidden;
+    /* display: none; */
+  }
+</style>
+
+<script is:inline>
+  const lightIcon = document.querySelector("light");
+  const darkIcon = document.querySelector("dark");
+  const userTheme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  const iconToggle = () => {
+    lightIcon.classList.toggle("display-none-theme-toggle");
+
+    darkIcon.classList.toggle("display-none-theme-toggle");
+  };
+
+  iconToggle();
+</script>
