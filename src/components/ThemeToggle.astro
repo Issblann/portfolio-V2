@@ -1,13 +1,11 @@
 ---
 import SunIcon from "./icons/Sun.astro";
 import MoonIcon from "./icons/Moon.astro";
-
-const THEMES = ["Light", "Dark"];
 ---
 
 <div class="relative ml-1 mr-1">
-  <SunIcon id="light" class="theme-toggle-icon light size-5 transition-all" />
-  <!-- <MoonIcon id="dark" class="theme-toggle-icon dark size-5 transition-all" /> -->
+  <SunIcon class="theme-toggle-icon light size-5 transition-all" />
+  <!-- <MoonIcon class="theme-toggle-icon dark size-5 transition-all" /> -->
 </div>
 
 <style>
@@ -30,8 +28,8 @@ const THEMES = ["Light", "Dark"];
 </style>
 
 <script is:inline>
-  const lightIcon = document.querySelector("light");
-  const darkIcon = document.querySelector("dark");
+  const lightIcon = document.querySelector(".light");
+  const darkIcon = document.querySelector(".dark");
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"

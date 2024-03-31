@@ -1,7 +1,9 @@
 ---
+import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
 ---
 
 <Layout
@@ -13,7 +15,17 @@ import Layout from "../layouts/Layout.astro";
       <Hero>
         <slot />
       </Hero>
+
       <hr class="border border-dotted w-full mt-6 border-gray-300 rounded-md" />
+    </SectionContainer>
+
+    <SectionContainer>
+      <div class="flex mb-10 items-center gap-4">
+        <h1 class="text-2xl font-bold">Experience</h1>
+        <BriefcaseIcon />
+      </div>
+
+      <Experience />
     </SectionContainer>
   </main>
 </Layout>
