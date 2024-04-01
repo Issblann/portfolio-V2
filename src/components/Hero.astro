@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
 import FileCv from "./icons/FileCv.astro";
+import { Image } from "astro:assets";
+import ImgPortfolio from "../imgs/img-portfolio.webp";
 ---
 
 <div
@@ -9,9 +11,9 @@ import FileCv from "./icons/FileCv.astro";
   <div
     class="w-44 h-44 grow-0 shrink-0 rounded-full shadow-xl mb-6 p-2 dark:bg-gray-900/80 bg-gray-300"
   >
-    <img
+    <Image
       class="w-full h-full object-cover rounded-full"
-      src="../imgs/img-portfolio.webp"
+      src={ImgPortfolio}
       alt="img-portfolio"
     />
   </div>
