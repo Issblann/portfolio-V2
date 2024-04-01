@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/public/*"
-  to = "/dist/:splat"
-  status = 200
