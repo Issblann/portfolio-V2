@@ -1,51 +1,59 @@
 ---
-import CardProjects from "./CardProjects.astro";
-import MiniCardProjects from "./MiniCardProjects.astro";
-import IMG1 from "../imgs/image-projects.webp";
-import IMG2 from "../imgs/image-projects-2.webp";
+import CardProjects from './CardProjects.astro';
+import MiniCardProjects from './MiniCardProjects.astro';
+import IMG1 from '../imgs/image-projects.webp';
+import IMG2 from '../imgs/image-projects-2.webp';
+import IMG3 from '../imgs/image-projects-3.png';
 const PRINCIPAL_PROJECTS = [
   {
+    img: IMG3,
+    title: 'Github searcher',
+    description: 'Search for users and repositories on github. Functional.',
+    link: 'https://examen-github-user.vercel.app/',
+    tags: ['React', 'Typescript', 'API REST'],
+  },
+  {
     img: IMG1,
-    title: "HyperX",
+    title: 'HyperX',
     description:
-      "Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.",
-    link: "https://eccommerce-tech-nucba.vercel.app",
-    tags: ["React", "Styled Components"],
+      'Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.',
+    link: 'https://eccommerce-tech-nucba.vercel.app',
+    tags: ['React', 'Styled Components'],
   },
   {
     img: IMG2,
-    title: "Sunset",
+    title: 'Sunset',
     description:
-      "Weather page with a map and geolocation function. Designed with an intuitive and attractive interface. Uses OpenWeather API.",
-    link: "https://sunset-issblann.vercel.app",
-    tags: ["React", "CSS vanilla"],
+      'Weather page with a map and geolocation function. Designed with an intuitive and attractive interface. Uses OpenWeather API.',
+    link: 'https://sunset-issblann.vercel.app',
+    tags: ['React', 'CSS vanilla'],
   },
 ];
 
 const SECONDARY_PROJECTS = [
   {
-    title: "Pomodoro React Native",
-    description: "Pomodoro with React Native.",
-    link: "https://github.com/Issblann/Pomodoro-React-Native",
-    tags: ["React Native", "Expo"],
+    title: 'Pomodoro React Native',
+    description: 'Pomodoro with React Native.',
+    link: 'https://github.com/Issblann/Pomodoro-React-Native',
+    tags: ['React Native', 'Expo'],
   },
   {
-    title: "Quotes Page",
-    description: "Motivational life quotes of famous leaders.",
-    link: "https://github.com/Issblann/Quotes-Page",
-    tags: ["Javascript", "CSS vanilla", "HTML"],
+    title: 'Quotes Page',
+    description: 'Motivational life quotes of famous leaders.',
+    link: 'https://github.com/Issblann/Quotes-Page',
+    tags: ['Javascript', 'CSS vanilla', 'HTML'],
   },
   {
-    title: "SuperMercar System",
-    description: "Supermarket API.",
-    link: "https://github.com/Issblann/Taller_4_JAVA_SuperMercarSis",
-    tags: ["JAVA"],
+    title: 'SuperMercar System',
+    description: 'Supermarket API.',
+    link: 'https://github.com/Issblann/Taller_4_JAVA_SuperMercarSis',
+    tags: ['JAVA'],
   },
   {
-    title: "Fresh Care",
-    description: "Skincare landing page.",
-    link: "https://fresh-care.vercel.app/",
-    tags: ["Javascript", "CSS vanilla", "HTML"],
+    title: 'Fresh Care',
+    description: 'Skincare landing page.',
+    link: 'https://fresh-care.vercel.app/',
+    tags: ['Javascript', 'CSS vanilla', 'HTML'],
   },
 ];
 ---
