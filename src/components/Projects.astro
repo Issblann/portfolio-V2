@@ -4,21 +4,32 @@ import MiniCardProjects from './MiniCardProjects.astro';
 import IMG1 from '../imgs/image-projects.webp';
 import IMG2 from '../imgs/image-projects-2.webp';
 import IMG3 from '../imgs/image-projects-3.png';
+import IMG4 from '../imgs/geoquizza-gif.gif';
+import IMG5 from '../imgs/petopia-gif.gif';
 const PRINCIPAL_PROJECTS = [
+  {
+    img: IMG4,
+    title: 'Geoquizza 🌎',
+    description:
+      'Game to guess the country by its flag. Developed with React. Functional.',
+    link: 'https://geoquizza.netlify.app',
+    tags: ['React', 'API REST'],
+  },
+
+  {
+    img: IMG5,
+    title: 'Petopia 🐶',
+    description:
+      'Web page to find pets for adoption. Developed with React. Functional.',
+    link: 'https://petopiacol.netlify.app',
+    tags: ['React', 'REDUX', 'API REST'],
+  },
   {
     img: IMG3,
     title: 'Github searcher',
     description: 'Search for users and repositories on github. Functional.',
     link: 'https://examen-github-user.vercel.app/',
     tags: ['React', 'Typescript', 'API REST'],
-  },
-  {
-    img: IMG1,
-    title: 'HyperX',
-    description:
-      'Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.',
-    link: 'https://eccommerce-tech-nucba.vercel.app',
-    tags: ['React', 'Styled Components'],
   },
   {
     img: IMG2,
@@ -32,16 +43,18 @@ const PRINCIPAL_PROJECTS = [
 
 const SECONDARY_PROJECTS = [
   {
-    title: 'Pomodoro React Native',
-    description: 'Pomodoro with React Native.',
-    link: 'https://github.com/Issblann/Pomodoro-React-Native',
-    tags: ['React Native', 'Expo'],
+    title: 'BOOM',
+    description:
+      'Web platform promoting sustainable mobility with eco-friendly transport solutions and a responsive design for all devices.',
+    link: 'https://github.com/Issblann/boom-md',
+    tags: ['React', 'REDUX', 'API REST'],
   },
   {
-    title: 'Quotes Page',
-    description: 'Motivational life quotes of famous leaders.',
-    link: 'https://github.com/Issblann/Quotes-Page',
-    tags: ['Javascript', 'CSS vanilla', 'HTML'],
+    title: 'Hyper Page',
+    description:
+      'Web page virtual store inspired by the design of hyperx, store peripherals gamers. It was made as a final project for the React module. Functional.',
+    link: 'https://eccommerce-tech-nucba.vercel.app',
+    tags: ['React', 'Styled Components'],
   },
   {
     title: 'SuperMercar System',
