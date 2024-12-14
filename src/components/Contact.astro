@@ -1,6 +1,6 @@
 ---
-import SendIcon from "./icons/Send.astro";
-import CopyIcon from "./icons/Copy.astro";
+import SendIcon from './icons/Send.astro';
+import CopyIcon from './icons/Copy.astro';
 ---
 
 <div class="flex gap-2">
@@ -8,7 +8,7 @@ import CopyIcon from "./icons/Copy.astro";
     id="myText"
     type="text"
     disabled
-    class="bg-black/5 dark:bg-white/5 grid place-items-center w-full py-1.5 px-3 rounded-lg text-slate-600 dark:text-slate-300"
+    class="bg-black/5 dark:bg-white/5 grid place-items-start w-full py-1.5 px-3 rounded-lg text-slate-600 dark:text-slate-300"
     value="anaperafan.dev@gmail.com"
   />
 
@@ -29,15 +29,15 @@ import CopyIcon from "./icons/Copy.astro";
 </div>
 
 <script is:inline>
-  const text = document.getElementById("myText")?.value;
+  const text = document.getElementById('myText')?.value;
 
-  const buttonCopy = document.querySelector(".copy-button");
+  const buttonCopy = document.querySelector('.copy-button');
   const copyContent = async () => {
     try {
       await navigator.clipboard.writeText(text);
-      buttonCopy.innerHTML = "Copied!";
+      buttonCopy.innerHTML = 'Copied!';
     } catch (error) {
-      console.error("Error copying email to clipboard", error);
+      console.error('Error copying email to clipboard', error);
     }
   };
 </script>
