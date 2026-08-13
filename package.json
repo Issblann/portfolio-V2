@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/plus-jakarta-sans": "^5.0.20",
-    "astro": "^5.16.5",
+    "astro": "^7.1.1",
     "astro-icon": "^1.1.5",
     "defu": "^6.1.7",
     "devalue": "^5.9.0",
